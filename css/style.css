@@ -2,19 +2,32 @@
   --green-headings: #457F21;
   --body-paragraph: #444444;
   --green-button: #73A242;
+  --green-button-hover: #618a38;
   --green-button-lightgreen:#99db5b;
   --orange-button: #FB9F3E;
+  --orange-button-hover: #e68a2a;
   --white-button: #FFFFFF;
   --light-green-bg: #F8FBF6;
   --signature-bg: #F9FAEF;
   --footer-bg: #1F2937;
-  --card-hover-bg: #FAFFE7
+  --card-hover-bg: #FAFFE7;
+  --border-color-light: #ced4da;
+  --neutral-bg-light: #F1F1F1;
+  --neutral-bg-form: #F5F5F5;
+  --neutral-bg-hover: #f8f9fa;
+  
+  /* <<<<<<< FONTS STYLES >>>>>>>>> */
+  --font-primary: "Montserrat", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
   line-height: 1.5;
 }
 
@@ -25,49 +38,31 @@ body {
 /* --------------------------------------------------- */
 
 .montserrat-thin {
-  font-family: "Montserrat", sans-serif;
   font-weight: 100;
 }
-
 .montserrat-light {
-  font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
-
 .montserrat-regular {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
 }
-
 .montserrat-medium {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
-
 .montserrat-semibold {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
-
 .montserrat-bold {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
-
 .montserrat-black {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-weight: var(--fw-black);
 }
-
 .montserrat-italic {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   font-style: italic;
 }
-
 .montserrat-bold-italic {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-style: italic;
 }
 
@@ -99,7 +94,7 @@ body {
 /* --------------------------------------------------- */
 
 .navbar-nav .nav-link {
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   color: var(--body-paragraph);
 }
 
@@ -133,10 +128,11 @@ body {
   background-color: var(--green-button);
   color: var(--white-button);
   border: none;
+  font-weight: var(--fw-semibold);
 }
 
 .btn-green:hover {
-  background-color: #618a38;
+  background-color: var(--green-button-hover);
   color: var(--white-button);
 }
 
@@ -144,10 +140,11 @@ body {
   background-color: var(--orange-button);
   color: var(--white-button);
   border: none;
+  font-weight: var(--fw-semibold);
 }
 
 .btn-orange:hover {
-  background-color: #e68a2a;
+  background-color: var(--orange-button-hover);
   color: var(--white-button);
 }
 
@@ -183,20 +180,20 @@ body {
 
 .search-bar .form-control {
   border-right: none;
-  border-color: #ced4da;
+  border-color: var(--border-color-light);
 }
 .search-bar .form-control:focus {
   z-index: 3;
-  border-color: #ced4da;
+  border-color: var(--border-color-light);
   box-shadow: 0 0 0 0.25rem rgba(115, 162, 66, 0.25);
 }
 .search-bar .btn {
-  background-color: white;
-  border: 1px solid #ced4da;
+  background-color: var(--white-button);
+  border: 1px solid var(--border-color-light);
   border-left: none;
 }
 .search-bar .btn:hover {
-  background-color: #f8f9fa;
+  background-color: var(--neutral-bg-hover);
 }
 
 /* --------------------------------------------------- */
@@ -281,6 +278,7 @@ body {
 /* ///////////////////////////////// */
 /* --------------------------------------------------- */
 
+
 .our-story-image-wrapper {
   height: 450px; 
   overflow: hidden; 
@@ -299,7 +297,7 @@ body {
 .btn-cta-white {
   background-color: var(--white-button);
   color: var(--green-headings); 
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   border-radius: 0.5rem;
   border: none;
 }
@@ -375,8 +373,8 @@ body {
   padding: 0.5rem 1.5rem;
   margin: 0 0.25rem;
   color: var(--body-paragraph);
-  font-weight: 500;
-  background-color: #F1F1F1;
+  font-weight: var(--fw-medium);
+  background-color: var(--neutral-bg-light);
   transition: all 0.2s ease-in-out;
 }
 
@@ -389,7 +387,7 @@ body {
 .menu-card {
   transition: all 0.3s ease-in-out;
   border: none !important;
-  background-color: #ffffff;
+  background-color: var(--white-button);
 }
 
 .menu-card:hover {
@@ -461,7 +459,7 @@ body {
 }
 
 .btn-add-item:hover {
-    background-color: #e68a2a;
+    background-color: var(--orange-button-hover);
     color: var(--white-button);
 }
 
@@ -469,7 +467,7 @@ body {
     color: var(--orange-button);
     border-color: var(--orange-button);
     border-width: 2px;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     min-width: 200px;
     border-radius: 0.5rem;
 }
@@ -486,14 +484,14 @@ body {
 /* --------------------------------------------------- */
 
 .reservation-form .form-label {
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   color: var(--body-paragraph);
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
 }
 
 .reservation-form .form-control {
-  background-color: #F5F5F5;
+  background-color: var(--neutral-bg-form);
   border: 2px solid transparent;
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
@@ -501,7 +499,7 @@ body {
 }
 
 .reservation-form .form-control:focus {
-  background-color: #ffffff;
+  background-color: var(--white-button);
   border-color: var(--green-button);
   box-shadow: 0 0 0 0.25rem rgba(115, 162, 66, 0.25);
 }
@@ -516,12 +514,8 @@ body {
 /* ///////////////////////////////// */
 /* --------------------------------------------------- */
 
-.bg-page-content {
-    background-color: var(--signature-bg);
-}
-
 .chef-card {
-  background-color: #ffffff;
+  background-color: var(--white-button);
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 15px rgba(0,0,0,.07); 
