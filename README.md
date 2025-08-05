@@ -10,7 +10,7 @@
 
 ## Frameworks
 - [Bootstrap (CDN)](https://getbootstrap.com/)
-- [Bulma](https://bulma.io/)
+- [Animate.css](https://animate.style/)
 
 ## Images Used
 
